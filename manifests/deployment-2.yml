@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "azkubernetes1-70f7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "azkubernetes1-70f7"
+  template:
+    metadata:
+      labels:
+        app: "azkubernetes1-70f7"
+    spec:
+      containers:
+        - name: "azkubernetes1-70f7"
+          image: "azhomework.azurecr.io/azkubernetes1"
+          ports:
+          - containerPort: 80
